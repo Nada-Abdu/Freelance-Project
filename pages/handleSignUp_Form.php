@@ -33,13 +33,13 @@
           <form style="margin-top: 2%;" id="signUp_form" action="handleSignUp_Form.php" method="POST"> 
             <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email" required>
             <input type="text" id="login" class="fadeIn second" name="name" placeholder="Name" required>
-            <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
             <div class="fadeIn fourth radio" style="  background-color: #f6f6f6; " > 
                 <input type="radio"  name="type" value="Developer" onchange="getValue(this)">
                 <label class="radio-container "style="margin-right: 5%;"> Devloper 
                 </label>
                 <input type="radio" name="type" value="User" onchange="getValue(this)">
-                <label   class="radio-container">User 
+                <label   class="radio-container">Client 
                 </label>
             </div>
             <div id="Devloper">
@@ -107,7 +107,7 @@ if(isset($_POST['submit'])){
         return;
     }
     if ( !is_numeric ($phone) && !empty ($phone) && strlen($phone)>9 ) {
-        echo "<script type='text/javascript'>errorAlert('the phone must be number only');</script>";
+        echo "<script type='text/javascript'>errorAlert('The phone must be number only');</script>";
         return;
     }
     if(strlen($password)<9 && !empty($password)){
@@ -122,7 +122,7 @@ if(isset($_POST['submit'])){
         $user = mysqli_fetch_assoc($user);
  
         if ($developer['Id'] != null || $user['Id'] != null  ){
-            echo "<script type='text/javascript'>errorAlert('your email already exists, Please sign in  ');</script>";
+            echo "<script type='text/javascript'>errorAlert('Your email already exists, Please sign in  ');</script>";
             return;
         }
         if (strcmp($type,"Developer" )==0){ 

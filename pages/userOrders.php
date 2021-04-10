@@ -107,8 +107,8 @@ $userID = $_COOKIE['userID'];
           */
             #$userID = $_SESSION['userID'];
 
-            $sql = "SELECT serviceId, category, orderDate FROM serviceorder, service WHERE serviceorder.userId = $userID AND serviceorder.serviceId = service.
-            Id ORDER BY date(orderDate) DESC";
+            $sql = "SELECT serviceId, category, orderDate, serviceorder.Id FROM serviceorder, service
+             WHERE serviceorder.userId = $userID AND serviceorder.serviceId = service.Id ORDER BY date(orderDate) DESC";
 
             $result = $conn->query($sql);
 
@@ -119,7 +119,7 @@ $userID = $_COOKIE['userID'];
                 echo '<div class="col-lg-3 col-md-6 portfolio-item filter-web">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                       <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                      <h4 class="title"><a href="">Order '.$row["serviceId"].'</a></h4>
+                      <h4 class="title"><a href="">Order '.$row["Id"].'</a></h4>
                       <p class="description">'.$row["category"].' application</p>
                       <p class="description">Date: '.$row["orderDate"].'</p>
 

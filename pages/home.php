@@ -196,7 +196,7 @@
           <br><br><br><br><br><br><br><br><br><br><br><br> <br>
           <h2 data-aos="fade-up" data-aos-delay="400" style="padding:0px ; margin:0px ; margin-bottom:20px">Find the perfect freelance services for your business</h2>
           <div data-aos="fade-up" data-aos-delay="800">
-            <a href="login.php" class="btn-get-started scrollto">Get Started</a>
+            <a href="handleSignUp_Form.php" class="btn-get-started scrollto">Get Started</a>
           </div>
       </div>
           <!-- <h1 data-aos="fade-up" class="js-nametag">All You Need To Power <br> Your Business</h1> -->

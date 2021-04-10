@@ -324,7 +324,7 @@
         ini_set('display_errors', 1);
         error_reporting(E_ALL & ~E_NOTICE);
          include "config-DB.php";
-         $services = mysqli_query($conn,"SELECT * FROM `service` ORDER BY 'date' DESC LIMIT 4");
+         $services = mysqli_query($conn,"SELECT * FROM `service` ORDER BY date(date) DESC LIMIT 4");
           while ($service = mysqli_fetch_assoc($services)) {
             $description=$service['description'];
             $category=$service['category'];
@@ -423,7 +423,7 @@
         <div class="row">
 
         <?php
-        $blogs= mysqli_query($conn,"SELECT * FROM `blog` ORDER BY 'date' LIMIT 4");
+        $blogs= mysqli_query($conn,"SELECT * FROM `blog` ORDER BY date(date) DESC LIMIT 4");
         while ($blog = mysqli_fetch_assoc($blogs)) {
           $shortDescription=$blog['shortDescription'];
           $category=$blog['category'];
@@ -508,7 +508,7 @@
             </div>
           </div>-->
           <div style="padding-top:20px; text-align:center;">
-            <button type="button" id="more" class="btn btn-outline-info" onclick="window.location.href='bogs.php'">More Blogs</button>
+            <button type="button" id="more" class="btn btn-outline-info" onclick="window.location.href='blogs.php'">More Blogs</button>
           </div>
           
         </div>

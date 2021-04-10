@@ -132,8 +132,8 @@ $profile_info = mysqli_fetch_row($profile_result);
                 <li><strong>Name</strong>: <?php print $profile_info[0]; ?> </li>
                 <li><strong>Phone</strong>: <?php print $profile_info[1]; ?> </li>
                 <li><strong>Email</strong>: <a href="#"><?php print $profile_info[2]; ?> </a></li>
-                <li><strong>Skills</strong>: <?php print $profile_info[3]; ?> </li>
                 <li><strong>Specialist</strong>: <?php print $profile_info[4]; ?> </li>
+                <li><strong>Skills</strong>: <?php print $profile_info[3]; ?> </li>
               </ul>
             </div>
           </div>
