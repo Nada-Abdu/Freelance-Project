@@ -402,7 +402,7 @@
             </div>
           </div> -->
           <div data-aos="fade-up" style="padding-top:20px; text-align:center">
-            <button type="button" id="more" class="btn btn-outline-info" onclick="window.location.href='sercives.php'">More Services</button>
+            <button type="button" id="more" class="btn btn-outline-info" onclick="window.location.href='services.php'">More Services</button>
           </div>
         </div>
         

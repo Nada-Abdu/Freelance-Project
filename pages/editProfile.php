@@ -278,7 +278,7 @@ if($profile_result = mysqli_query($conn, $profile_query)){
 
     async function redirectToProfile() {
       await successAlert("Profile updated successfully!");
-      window.location.replace("http://localhost/Advanced%20Web%20UQU%20Course/Project/profile.php");
+      window.location.replace("http://localhost/Advanced%20Web%20UQU%20Course/Freelance-Project/pages/profile.php");
    }
     </script>
 

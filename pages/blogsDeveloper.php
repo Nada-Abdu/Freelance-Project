@@ -133,8 +133,9 @@ include "config-DB.php";
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href=""><?php echo  $title ?></a></h4>
               <p class="description"><?php echo $shortDescription ?></p>
-              <p class="date" style="padding-top:15px;"> <b> By : </b> <?php echo "  $name" ?> 
-                <br> <b> Date : </b> <?php echo "  $date" ?>   </p>
+              <?php echo "<p class='date' style='padding-top:15px;'> <b> By: <a href='profileUser.php?developerId=".$developer['Id']."'> </b>".$name." </a>";?>
+               <!-- <p class="date" style="padding-top:15px;"> <b> By: </b> <?php// echo "  $name" ?> -->
+                <br> <b> Date: </b> <?php echo "  $date" ?>   </p>
             </div>
           </div>
             
@@ -148,8 +149,9 @@ include "config-DB.php";
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href=""><?php echo  $title ?></a></h4>
               <p class="description"><?php echo $shortDescription ?></p>
-              <p class="date" style="padding-top:15px;"> <b> By : </b> <?php echo "  $name" ?> 
-                <br> <b> Date : </b> <?php echo "  $date" ?>   </p>
+              <?php echo "<p class='date' style='padding-top:15px;'> <b> By: <a href='profileUser.php?developerId=".$developer['Id']."'> </b>".$name." </a>";?>
+               <!-- <p class="date" style="padding-top:15px;"> <b> By: </b> <?php// echo "  $name" ?> --> 
+                <br> <b> Date: </b> <?php echo "  $date" ?>   </p>
             </div>
           </div>
           <?php
@@ -164,8 +166,9 @@ include "config-DB.php";
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href=""><?php echo  $title ?></a></h4>
               <p class="description"><?php echo $shortDescription ?></p>
-              <p class="date" style="padding-top:15px;"> <b> By : </b> <?php echo "  $name" ?> 
-                <br> <b> Date : </b> <?php echo "  $date" ?>   </p>
+              <?php echo "<p class='date' style='padding-top:15px;'> <b> By: <a href='profileUser.php?developerId=".$developer['Id']."'> </b>".$name." </a>";?>
+               <!-- <p class="date" style="padding-top:15px;"> <b> By: </b> <?php// echo "  $name" ?> --> 
+                <br> <b> Date: </b> <?php echo "  $date" ?>   </p>
             </div>
           </div>
             
