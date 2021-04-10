@@ -4,7 +4,7 @@ if(isset($_POST['orderID'])){
     $orderID=$_POST['orderID'];
     $result="";
 
-    $sql='UPDATE `serviceOrder` SET `state`= "completed" WHERE `serviceId`='.$orderID;
+    $sql='UPDATE `serviceOrder` SET `state`= "completed" WHERE `Id`='.$orderID;
     
     if(mysqli_query($conn, $sql)){
         $result="Success";

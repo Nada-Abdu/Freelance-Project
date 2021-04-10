@@ -181,21 +181,21 @@ $developerID = $_COOKIE['developerId'];
               function addUI($title, $description, $date, $name, $blogID)
               {
                 $htmlCode = '<div class="col-lg-3 col-md-6 portfolio-item filter-UI"> <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="height: 450px;"> <div class="icon"><i class="bx bx-columns"></i></div> <h4 class="title"><a href="">' . $title . '</a></h4> <p class="description">' . $description . '</p><p class="date" style="padding-top:15px;"> <b> By : </b> ' . $name . ' <br> <b> Date : </b> ' . $date . '   </p>
-                 <div style="position: fixed; bottom: 7px;"> <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete the Blog</button> </div>
+                 <div style="position: fixed; bottom: 7px; right: 110px;"> <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete</button> </div>
                 </div> </div>';
                 echo $htmlCode;
               }
               function addWeb($title, $description, $date, $name, $blogID)
               {
                 $htmlCode = '<div class="col-lg-3 col-md-6 portfolio-item filter-web"> <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="height: 450px;"> <div class="icon"><i class="bx bx-laptop"></i></div> <h4 class="title"><a href="">' . $title . '</a></h4> <p class="description">' . $description . '</p><p class="date" style="padding-top:15px;"> <b> By : </b> ' . $name . '<br> <b> Date : </b> ' . $date . '   </p>
-                <div style="position: fixed; bottom: 7px;"> <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete the Blog</button> </div>
+                <div style="position: fixed; bottom: 7px; right: 110px;"> <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete</button> </div>
                 </div> </div>';
                 echo $htmlCode;
               }
               function addMobile($title, $description, $date, $name, $blogID)
               {
                 $htmlCode = '<div class="col-lg-3 col-md-6 portfolio-item filter-Mobile"> <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="height: 450px;"> <div class="icon"><i class="bx bx-mobile-alt"></i></div> <h4 class="title"><a href="">' . $title . '</a></h4> <p class="description">' . $description . '</p><p class="date" style="padding-top:15px;"> <b> By : </b> ' . $name . ' <br> <b> Date : </b> ' . $date . '   </p>
-                 <div style="position: fixed; bottom: 7px;" > <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete the Blog</button> </div>
+                <div style="position: fixed; bottom: 7px; right: 110px;"> <button class="btn-complate" id="' . $blogID . '" onclick="removeBlog(this)">Delete</button> </div>
                 </div> </div>';
                 echo $htmlCode;
               }

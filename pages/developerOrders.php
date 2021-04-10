@@ -140,6 +140,7 @@ $developerID = $_COOKIE['developerId'];
 
 
             if (isset($developerID)) {
+              //echo "YES";
               addDeveloperOrders($developerID);
             }
 
@@ -150,19 +151,20 @@ $developerID = $_COOKIE['developerId'];
               function addDeveloperOrders($developerID)
               {
                 include('config-DB.php');
-                $sql = "SELECT service.description, service.category , user.name , user.email , 
-                serviceOrder.orderDate , serviceOrder.state, serviceOrder.serviceId
+                $sql = "SELECT service.description, service.category , user.name , user.email, 
+                serviceorder.orderDate , serviceorder.state, serviceorder.serviceId, serviceorder.Id
                  FROM service, user, serviceOrder 
-                 WHERE serviceOrder.userId=user.Id AND serviceOrder.serviceId=service.Id AND service.developerId=$developerID";
+                 WHERE serviceorder.userId=user.Id AND serviceorder.serviceId=service.Id AND service.developerId=$developerID";
                 $result = $conn->query($sql);
 
                 //print($result->fetch_assoc()["state"]);
                 if ($result->num_rows > 0) {
+                  //echo "YESSSSSSSSSSS";
                   // output data of each row
                   while ($row = $result->fetch_assoc()) {
-                    if ($row["state"] == "uncompleted") {
-                      addUncompletedOrders($row["category"], $row["description"], $row["name"], $row["email"],  $row["orderDate"], $row["serviceId"]);
-                    } elseif ($row["state"] == "completed") {
+                    if (strcasecmp($row["state"], "Uncomplete")==0) {
+                      addUncompletedOrders($row["category"], $row["description"], $row["name"], $row["email"],  $row["orderDate"], $row["serviceId"], $row['Id']);
+                    } elseif (strcasecmp($row["state"], "completed")==0) {
                       addCompletedOrders($row["category"], $row["description"], $row["name"], $row["email"],  $row["orderDate"]);
                     }
                   }
@@ -171,7 +173,7 @@ $developerID = $_COOKIE['developerId'];
                   echo "0 results";
                 }*/
               }
-              function addUncompletedOrders($category, $description, $name, $email,  $orderDate, $serviceId)
+              function addUncompletedOrders($category, $description, $name, $email,  $orderDate, $serviceId, $Id)
               {
                
                 $htmlCode = '<div class="col-lg-3 col-md-6 portfolio-item filter-uncompleted" style="margin-left: 100px;"> <div class="icon-box" data-aos="fade-up" data-aos-delay="100" style="height: 320px; width: 400px;"> ';
@@ -182,7 +184,7 @@ $developerID = $_COOKIE['developerId'];
                 } else {
                   $htmlCode .= '<div class="icon"><i class="bx bx-columns"></i></div>';
                 }
-                $htmlCode .= ' <h4 class="title"><a href="">' . $description . '</a></h4> <p class="description"> <b> User Name: </b> ' . $name . ' </p> <p class="description"> <b> User Email: </b> ' . $email . ' </p> <p class="description"> <b> Order Date: </b> ' . $orderDate . ' </p> <div> <button class="btn-complate" id="' . $serviceId . '" onclick="updateOrderState(this)">Completed</button> </div> </div> </div>';
+                $htmlCode .= ' <h4 class="title"><a href="">' . $description . '</a></h4> <p class="description"> <b> User Name: </b> ' . $name . ' </p> <p class="description"> <b> User Email: </b> ' . $email . ' </p> <p class="description"> <b> Order Date: </b> ' . $orderDate . ' </p> <div> <button class="btn-complate" id="' . $Id . '" onclick="updateOrderState(this)">Completed</button> </div> </div> </div>';
                
                 echo $htmlCode;
               }
