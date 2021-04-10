@@ -70,7 +70,7 @@ padding: 90px;
 
       <div class="logo">
 
-         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+         <a href="developerHome.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -120,7 +120,7 @@ padding: 90px;
 
         <div class="row portfolio-container services center"  >
           <div class="col-lg-9 col-md-9 portfolio-item filter-web" >
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4 class="title"><a href="">Select the category: </a></h4>
 <div>
