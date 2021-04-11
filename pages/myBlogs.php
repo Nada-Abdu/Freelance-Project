@@ -158,7 +158,7 @@ $developerID = $_COOKIE['developerId'];
                 $sql = "SELECT  `developerId`, blog.Id, `name`, `category`, `title`, `shortDescription`, `date`
                  FROM `blog`,`developer`
                   WHERE `developerId`=". $developerID.'
-                   AND developer.Id='. $developerID." ORDER BY date(date) DESC";
+                   AND developer.Id='. $developerID."' ORDER BY date(date) DESC";
 
                 $result = $conn->query($sql);
 

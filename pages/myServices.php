@@ -77,7 +77,7 @@ $developerID = $_COOKIE['developerId'];
           </li>
           <li class="dropdown"><a href="#"><span>Blogs</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="blogs.php">All Blogs</a></li>
+              <li><a href="blogsDeveloper.php">All Blogs</a></li>
               <li><a href="myBlogs.php">My Blogs</a></li>
             </ul>
           </li>
